@@ -30,7 +30,7 @@ class HumidityLogger:
 if __name__ == '__main__':
     import time
 
-    h = HumidityLogger(3, lambda: print('ok'))
+    h = HumidityLogger(5, lambda: print('ok'))
     h.start()
 
     while input() != 'q':
