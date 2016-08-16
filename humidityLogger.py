@@ -3,6 +3,8 @@ import threading
 
 class HumidityLogger:
     def __init__(self, interval, log_func):
+        self.__t = threading.Thread(target=self.__main)
+        self.__stop = threading.Event()
         self.__interval = interval
         self.__log = log_func
         self.running = False
@@ -10,8 +12,6 @@ class HumidityLogger:
     def start(self):
         if self.running:
             return
-        self.__t = threading.Thread(target=self.__main)
-        self.__stop = threading.Event()
         self.__t.start()
         self.running = True
 
