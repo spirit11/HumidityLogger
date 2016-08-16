@@ -3,3 +3,4 @@ Python project for logging humidity sensors data on Raspberry Pi to MySQL databa
 
 * Provides web interface for stored data
 * Logs data from sensor
+* Moreover
